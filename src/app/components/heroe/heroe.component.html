@@ -1,0 +1,21 @@
+<h1>{{ heroe.nombre | uppercase}} <small> ({{ heroe.aparicion | date:'y'}})</small></h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <img class="img-fluid" src=" {{ heroe.img }}" alt=" {{ heroe.nombre}}">
+            <br>
+            <br>
+            <a (click)="regresar()" class="btn btn-outline-danger btn-block">regresar</a>
+        </div>
+        <div class="col-sm-8">
+            <h3>{{ heroe.nombre | uppercase }}</h3>
+            <hr>
+            <p>{{ heroe.bio }}</p>
+            <div>
+                <img *ngIf="heroe.casa == 'Marvel'" width="80" height="80" class="img-logo" src="assets/img/marvel.jpg" alt="MARVEL">
+                <img *ngIf="heroe.casa == 'DC'" width="80" height="80" class="img-logo" src="assets/img/dc.jpg" alt="DC">
+            </div>
+        </div>
+    </div>
+</div>

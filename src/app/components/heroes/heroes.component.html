@@ -1,0 +1,11 @@
+<h1>
+    Héroes <small>Marvel y Dc</small></h1>
+<hr>
+
+<div class="card-columns ">
+    <!-- 
+        
+     -->
+    <app-heroetarjeta (heroeSeleccionado)="verheroe( $event )" [heroex]="foo" [indice]="id" *ngFor="let foo of heroes; let id = index"></app-heroetarjeta>
+
+</div>
